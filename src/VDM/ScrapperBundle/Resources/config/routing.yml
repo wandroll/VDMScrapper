@@ -1,0 +1,11 @@
+vdm_scrapper_getposts:
+    path:     /api/posts
+    defaults: { _controller: VDMScrapperBundle:VDMPost:all }
+    requirements:
+        _method: GET
+vdm_scrapper_getpostbyid:
+    path:     /api/post/{id}
+    defaults: { _controller: VDMScrapperBundle:VDMPost:get }
+    requirements:
+        method: GET
+        id: \d+
