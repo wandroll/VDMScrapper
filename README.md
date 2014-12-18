@@ -25,13 +25,11 @@ Execute the following command from the terminal:
 
     php app/console vdm:import
 
-The script returns a status code of `0` if all mandatory requirements are met,
-`1` otherwise.
 
 3) Retrieve data through the API
 --------------------------------
 
-Once data are stored in database, you can query a particular post
+Once data are stored in database, you can query a particular post through id or criteria :
 
 	/api/post/3
 	

@@ -22,11 +22,11 @@ class VDMPostController extends Controller
           ->getRepository('VDMScrapperBundle:VDMPost')
         ;
         $vdmPost = $repository->getVDMPostById($id);
-
         if( $vdmPost === null){
             throw new NotFoundHttpException ('No VDM post found');
         }
-        
+        $vdmPost[0]['date'] = $vdmPost[0]['date']->format('Y-m-d H:i:s');
+
         $response = new Response();
         $response->setContent(json_encode(array(
             'post' => $vdmPost
@@ -50,6 +50,11 @@ class VDMPostController extends Controller
         ;
         $vdmPosts = $repository->getVDMPostsWithCriteria ($authorReq, $fromReq, $toReq);
 
+        $max = count($vdmPosts);
+        for($i = 0;$i<$max;$i++){
+            $vdmPosts[$i]['date'] = $vdmPosts[$i]['date']->format('Y-m-d H:i:s');  
+        }
+
         $response = new Response();
         $response->setContent(json_encode(array(
             'posts' => $vdmPosts, 
@@ -59,6 +64,4 @@ class VDMPostController extends Controller
         $response->headers->set('Content-Type', 'application/json');
         return $response;
     }
-
-
 }

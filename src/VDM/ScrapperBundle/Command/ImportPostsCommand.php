@@ -15,16 +15,13 @@ class ImportPostsCommand extends ContainerAwareCommand
         $this
             ->setName('vdm:import')
             ->setDescription('Import posts from vdm.fr')
-         //   ->addArgument('name', InputArgument::OPTIONAL, 'Qui voulez vous saluer??')
-          //  ->addOption('yell', null, InputOption::VALUE_NONE, 'Si définie, la tâche criera en majuscules')
         ;
     }
 
     protected function execute(InputInterface $input,OutputInterface $output)
     {
-    	//getApplication()->getKernel()->
     	$vdmPostsUpdater = $this->getContainer()->get('vdm_scrapper.vdmpostsupdater');
     	$vdmPostsUpdater->runUpdate();
-    	$output->writeln('on a reussi');
+    	$output->writeln('Posts successfully retrieved !');
     }
 }
