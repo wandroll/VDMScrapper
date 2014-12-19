@@ -6,10 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use VDM\ScrapperBundle\Entity\VDMPost;
-use VDM\ScrapperBundle\Entity\VDMPostQuery;
-use FOS\RestBundle\Controller\Annotations as Rest;
-
 
 class VDMPostController extends Controller
 {

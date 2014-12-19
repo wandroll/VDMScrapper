@@ -4,7 +4,6 @@ namespace VDM\ScrapperBundle\Service;
 
 use Doctrine\ORM\EntityManager;
 use VDM\ScrapperBundle\Entity\VDMPost;
-use Symfony\Component\DomCrawler\Crawler;
 use Goutte\Client;
 
 class VDMPostsUpdater
