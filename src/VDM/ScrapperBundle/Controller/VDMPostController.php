@@ -29,7 +29,7 @@ class VDMPostController extends Controller
 
         $response = new Response();
         $response->setContent(json_encode(array(
-            'post' => $vdmPost
+            'post' => $vdmPost[0]
         ), JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_PRETTY_PRINT 
         ));
         $response->headers->set('Content-Type', 'application/json');
