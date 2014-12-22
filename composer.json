@@ -21,7 +21,9 @@
         "fabpot/goutte": "~2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "behat/behat": "~3.0",
+        "behat/symfony2-extension": "~2.0"
     },
     "scripts": {
         "post-root-package-install": [
