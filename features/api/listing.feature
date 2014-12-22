@@ -6,7 +6,7 @@ Feature: List posts by author and date range
 
     Scenario: Listing post with no filter
         Given there are posts in database
-        When I go to /api/posts"
+        When I go to /api/posts
         Then I should see the json description of all the existing posts in database
 
     Scenario: Listing post from one author
