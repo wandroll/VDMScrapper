@@ -35,3 +35,6 @@
 
 # Composer PHAR
 /composer.phar
+
+#unwanted files from Mac users
+.DS_Store
